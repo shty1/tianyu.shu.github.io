@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 指定了页面的编码格式-->
+    <meta charset="utf-8">
+    <!-- 如果当前浏览器是ie ，使用最新的渲染引擎来渲染页面-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置视口-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="../lib/html5shiv/html5shiv.min.js"></script>
+    <script src="../lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .container{
+            height:1000px;
+            background-color: red;
+        }
+        .row{
+            height: 50px;
+            background-color: green;
+            margin-bottom: 5px;
+        }
+        
+        .row>div{
+            height:50px;
+
+        }
+        .row>div:nth-child(odd){
+            background-color: yellowgreen;
+        }
+
+        .row>div:nth-child(even){
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+        </div>
+<!-- 列偏移-->
+        <div class="row">
+            <div class="col-md-4 col-md-offset-8"></div>
+        </div>
+<!-- 列排序 左右偏移-->
+        <div class="row">
+            <div class="col-md-3 col-md-push-9"></div>
+            <div class="col-md-9 col-md-pull-3"></div>
+        </div>
+<!--栅格嵌套-->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6"></div>
+                </div>
+            </div>
+            <div class="col-md-8"></div>
+        </div>
+
+        <!-- 相应式栅格-->
+        <div class="row">
+            <div class="col-lg-4 col-md-2 col-xs-1"></div>
+            <div class="col-lg-4 col-md-8 col-xs-1"></div>
+            <div class="col-lg-4 col-md-2 col-xs-10"></div>
+        </div>
+
+
+</div>
+
+
+
+</body>
+</html>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- 引入boostrap 之前务必引入jq-->
+<script src="../lib/jquery/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>

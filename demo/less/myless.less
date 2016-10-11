@@ -1,0 +1,39 @@
+
+//定义变量
+@import "var";
+
+// 嵌套
+.box{
+  width: 200px;
+  background-color: @bgc;
+  div{
+    font-size:20px;
+    >p{
+      color:@bgc;
+      a{
+        text-decoration: none;
+        &:hover{
+          color:pink;
+        }
+
+        &::after{
+          content:"";
+        }
+      }
+
+    }
+  }
+}
+
+.bd{
+  border: 1px solid @bgc;
+  border-radius: 5px;
+}
+// 混合
+p{
+  background-color: @bgc;
+  // 运算
+  width: 101/3px;
+  .bd();
+  
+}

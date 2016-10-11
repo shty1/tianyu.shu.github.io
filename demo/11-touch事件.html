@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height:200px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
+
+<script>
+    //获取 目标元素
+    var box=document.querySelector('.box');
+    //绑定touch事件
+//    touchstart
+//    touchmove
+//    touchend
+
+//     需要获取 用户操作的数据 才能 判断用户行为
+
+//  给box 绑定 touchstart 事件
+    box.addEventListener('touchstart',function(e){
+        console.log('触屏开始');
+        console.log(e);
+        console.log(e.targetTouches[0].clientX);
+        console.log(e.targetTouches[0].clientY);
+    })
+
+//     绑定 触屏移动事件
+    box.addEventListener('touchmove',function(e){
+        console.log('触屏移动')
+        console.log(e);
+        console.log(e.targetTouches[0].clientX);
+        console.log(e.targetTouches[0].clientY);
+    })
+
+//     绑定触屏结束事件
+    box.addEventListener('touchend',function(e){
+        console.log('触屏结束');
+//        console.log(e.targetTouches[0].clientX);
+//        console.log(e.targetTouches[0].clientY);
+
+        console.log(e.changedTouches[0].clientX);
+        console.log(e.changedTouches[0].clientY);
+    })
+
+
+
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html{
+            font-size:20px;
+        }
+        /* 大屏*/
+        @media screen and (min-width: 1200px) {
+            html{
+                font-size:40px;
+            }
+        }
+
+        /* 中屏*/
+        @media screen and (max-width: 1200px) and (min-width: 992px){
+            html{
+                font-size:30px;
+            }
+        }
+
+        /* 小屏*/
+        @media screen and (max-width: 992px) and (min-width: 768px){
+            html{
+                font-size:20px;
+            }
+        }
+
+        /* 超小屏*/
+
+        @media screen and (max-width: 768px) {
+            html{
+                font-size:12px;
+            }
+        }
+
+        body{
+            font-size:16px;
+        }
+
+        .box{
+            width: 20rem;
+            height:8rem;
+            background-color: green;
+            font-size:4rem;
+            color:yellow;
+            text-align: center;
+            line-height: 10rem;
+            margin:100px auto;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        传智播客
+    </div>
+</body>
+</html>

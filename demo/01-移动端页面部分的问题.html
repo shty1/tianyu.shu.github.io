@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            font-size:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
+<script>
+    var w=0;
+//     获取当前页面的宽度
+    function getWdith(){
+//        获取当前屏幕的宽度
+        w=document.documentElement.clientWidth;
+        document.querySelector('.box').innerHTML=w;
+    }
+
+    //     调用
+    getWdith();
+
+//    当窗口尺寸发生改变是 再次调用
+    window.onresize=function(){
+        getWdith();
+    }
+
+
+</script>

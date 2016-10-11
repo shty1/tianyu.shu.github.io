@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .left{
+            width: 200px;
+            height: 300px;
+            background-color: green;
+            float: left;
+            /*overflow: hidden;*/
+        }
+        
+        .right{
+            height:500px;
+            border: 1px solid #000;
+            background-color: brown;
+            /*BFC: 加上overflow:hidden  盒子就变成了一个绝缘的盒子，不会跟其他的盒子有交集*/
+            overflow: hidden;
+        }
+
+        /* BFC */
+
+        .right span{
+            float: right;}
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="right">
+        <span >afd</span>
+    </div>
+</body>
+</html>
